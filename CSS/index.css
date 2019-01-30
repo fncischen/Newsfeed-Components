@@ -112,3 +112,21 @@ body {
   font-family: 'Roboto';
   background-color: #fffef7;
 }
+@keyframes pandown {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.article-open {
+  animation-name: pandown;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
