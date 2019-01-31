@@ -4,10 +4,35 @@
 /* Below this line is where you will start your work */
 /* It is important to note, you will not be writing any CSS in this file*/
 @import '../Header/Header.less';
+@import '../Menu/Menu.less';
+@import '../Article/Article.less';
 
 html, body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto';
   background-color: #fffef7;
+}
+
+@keyframes pandown {
+ 0% {
+  transform: scale(0);
+ }
+
+ 100% {
+  transform: scale(1);
+ }
+}
+
+// https://developers.google.com/web/updates/2017/03/performant-expand-and-collapse
+
+.article-open {
+  animation-name: pandown;
+  animation-duration: 0.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: none;
+  animation-play-state: running; 
 }
